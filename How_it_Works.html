@@ -1,0 +1,471 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>How it Works · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="Home.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Home.html">
+            
+                <a href="Home.html">
+            
+                    
+                    Home
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="How_it_Works.html">
+            
+                <a href="How_it_Works.html">
+            
+                    
+                    How it Works
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >How it Works</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6D41;&#x7A0B;&#x56FE;">&#x6D41;&#x7A0B;&#x56FE;</h1>
+<p>&#x4E0B;&#x56FE;&#x5C55;&#x793A;&#x4E86;<code>Hystrix</code>&#x8C03;&#x7528;&#x4F9D;&#x8D56;&#x670D;&#x52A1;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;&#x53D1;&#x751F;&#x7684;&#x4E8B;&#xFF1A;</p>
+<p><img src="images/hystrix-command-flow-chart.png" alt=""></p>
+<ul>
+<li>1&#x3001;&#x6784;&#x9020;<code>HystrixCommand</code>&#x6216;&#x8005;<code>HystrixObservableCommand</code>&#x5BF9;&#x8C61;</li>
+<li>2&#x3001;&#x6267;&#x884C;&#x547D;&#x4EE4;</li>
+<li>3&#x3001;&#x5224;&#x65AD;&#x8BE5;&#x8BF7;&#x6C42;&#x7684;&#x54CD;&#x5E94;&#x662F;&#x5426;&#x88AB;&#x7F13;&#x5B58;</li>
+<li>4&#x3001;&#x65AD;&#x8DEF;&#x5668;&#x662F;&#x5426;&#x5F00;&#x542F;</li>
+<li>5&#x3001;&#x7EBF;&#x7A0B;&#x6C60;&#x3001;&#x961F;&#x5217;&#x3001;&#x4FE1;&#x53F7;&#x91CF;&#x662F;&#x5426;&#x9971;&#x548C;</li>
+<li>6&#x3001;&#x6267;&#x884C;<code>HystrixObservableCommand.construct()</code>&#x6216;<code>HystrixCommand.run()</code></li>
+<li>7&#x3001;&#x8BA1;&#x7B97;&#x65AD;&#x8DEF;&#x5668;&#x7684;&#x5065;&#x5EB7;&#x7A0B;&#x5EA6;</li>
+<li>8&#x3001;&#x6267;&#x884C;&#x964D;&#x7EA7;&#x903B;&#x8F91;</li>
+<li>9&#x3001;&#x8FD4;&#x56DE;&#x6210;&#x529F;&#x54CD;&#x5E94;</li>
+</ul>
+<h2 id="1&#x3001;&#x6784;&#x9020;hystrixcommand&#x6216;&#x8005;hystrixobservablecommand&#x5BF9;&#x8C61;">1&#x3001;&#x6784;&#x9020;<code>HystrixCommand</code>&#x6216;&#x8005;<code>HystrixObservableCommand</code>&#x5BF9;&#x8C61;</h2>
+<p>&#x7B2C;&#x4E00;&#x6B65;&#x5C31;&#x662F;&#x6784;&#x9020;&#x51FA;<code>HystrixCommand</code>&#x6216;&#x8005;<code>HystrixObservableCommand</code>&#x5BF9;&#x8C61;&#x6765;&#x8868;&#x793A;&#x8BF7;&#x6C42;&#x4F9D;&#x8D56;&#x670D;&#x52A1;&#x7684;&#x8BF7;&#x6C42;&#x3002;&#x5411;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4F20;&#x9012;&#x53D1;&#x51FA;&#x8BF7;&#x6C42;&#x65F6;&#x6240;&#x9700;&#x7684;&#x4EFB;&#x4F55;&#x53C2;&#x6570;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F9D;&#x8D56;&#x670D;&#x52A1;&#x8FD4;&#x56DE;&#x7684;&#x5355;&#x4E00;&#x54CD;&#x5E94;&#xFF0C;&#x5C31;&#x6784;&#x9020;&#x51FA;<code>HystrixCommand</code>&#x5BF9;&#x8C61;&#x3002;&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-java">HystrixCommand command = <span class="hljs-keyword">new</span> HystrixCommand(arg1, arg2);
+</code></pre>
+<p>&#x5982;&#x679C;&#x671F;&#x671B;&#x4F9D;&#x8D56;&#x9879;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x53D1;&#x51FA;&#x54CD;&#x5E94;&#x7684;<code>Observable</code>&#xFF0C;&#x5219;&#x6784;&#x9020;&#x4E00;&#x4E2A;<code>HystrixObservableCommand</code>&#x5BF9;&#x8C61;&#x3002; &#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-java">HystrixObservableCommand command = <span class="hljs-keyword">new</span> HystrixObservableCommand(arg1, arg2);
+</code></pre>
+<h2 id="2&#x3001;&#x6267;&#x884C;&#x547D;&#x4EE4;">2&#x3001;&#x6267;&#x884C;&#x547D;&#x4EE4;</h2>
+<p>&#x901A;&#x8FC7;&#x4F7F;&#x7528;<code>Hystrix</code>&#x547D;&#x4EE4;&#x5BF9;&#x8C61;&#x7684;&#x4EE5;&#x4E0B;&#x56DB;&#x79CD;&#x65B9;&#x6CD5;&#x4E4B;&#x4E00;&#xFF0C;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x7684;&#x56DB;&#x79CD;&#x65B9;&#x6CD5;&#xFF08;&#x524D;&#x4E24;&#x79CD;&#x4EC5;&#x9002;&#x7528;&#x4E8E;&#x7B80;&#x5355;&#x7684;<code>HystrixCommand</code>&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x4E0D;&#x9002;&#x7528;&#x4E8E;<code>HystrixObservableCommand</code>&#xFF09;&#xFF1A;</p>
+<ul>
+<li><code>execute()</code>&#xFF1A;&#x963B;&#x585E;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x4ECE;&#x4F9D;&#x8D56;&#x9879;&#x63A5;&#x6536;&#x5230;&#x7684;&#x5355;&#x4E2A;&#x54CD;&#x5E94;&#xFF08;&#x6216;&#x5728;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5F15;&#x53D1;&#x5F02;&#x5E38;&#xFF09;</li>
+<li><code>queue()</code>&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>Future</code>&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B83;&#x4ECE;&#x4F9D;&#x8D56;&#x9879;&#x4E2D;&#x83B7;&#x5F97;&#x5355;&#x4E2A;&#x54CD;&#x5E94;</li>
+<li><code>observe()</code>&#xFF1A;&#x8BA2;&#x9605;&#x8868;&#x793A;&#x6765;&#x81EA;&#x4F9D;&#x8D56;&#x9879;&#x7684;&#x54CD;&#x5E94;&#x7684;<code>Observable</code>&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x590D;&#x5236;&#x8BE5;&#x6E90;<code>Observable</code>&#x7684;<code>Observable</code></li>
+<li><code>toObservable()</code>&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>Observable</code>&#xFF0C;&#x5F53;&#x60A8;&#x8BA2;&#x9605;&#x5B83;&#x65F6;&#xFF0C;&#x5B83;&#x5C06;&#x6267;&#x884C;<code>Hystrix</code>&#x547D;&#x4EE4;&#x5E76;&#x53D1;&#x51FA;&#x5176;&#x54CD;&#x5E94;</li>
+</ul>
+<pre><code class="lang-java">K             value   = command.execute();
+Future&lt;K&gt;     fValue  = command.queue();
+Observable&lt;K&gt; ohValue = command.observe();         <span class="hljs-comment">//hot observable</span>
+Observable&lt;K&gt; ocValue = command.toObservable();    <span class="hljs-comment">//cold observable</span>
+</code></pre>
+<p>&#x540C;&#x6B65;&#x8C03;&#x7528;<code>execute()</code>&#x8C03;&#x7528;<code>queue().get(). queue()</code>&#x4F9D;&#x6B21;&#x8C03;&#x7528;<code>toObservable().toBlocking().toFuture()</code>&#x3002; &#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x6700;&#x7EC8;&#x6BCF;&#x4E2A;<code>HystrixCommand</code>&#x90FD;&#x7531;<code>Observable</code>&#x5B9E;&#x73B0;&#x63D0;&#x4F9B;&#x652F;&#x6301;&#xFF0C;&#x5373;&#x4F7F;&#x662F;&#x90A3;&#x4E9B;&#x65E8;&#x5728;&#x8FD4;&#x56DE;&#x5355;&#x4E2A;&#x7B80;&#x5355;&#x503C;&#x7684;&#x547D;&#x4EE4;&#x4E5F;&#x662F;&#x5982;&#x6B64;&#x3002;</p>
+<h2 id="3&#x3001;&#x8BF7;&#x6C42;&#x54CD;&#x5E94;&#x662F;&#x5426;&#x88AB;&#x7F13;&#x5B58;">3&#x3001;&#x8BF7;&#x6C42;&#x54CD;&#x5E94;&#x662F;&#x5426;&#x88AB;&#x7F13;&#x5B58;</h2>
+<p>&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x8BF7;&#x6C42;&#x662F;&#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x8BF7;&#x6C42;&#x7F13;&#x5B58;&#xFF0C;&#x4E14;&#x8FD9;&#x4E2A;&#x8BF7;&#x6C42;&#x7684;&#x54CD;&#x5E94;&#x6B64;&#x65F6;&#x4E5F;&#x662F;&#x53EF;&#x7528;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x7F13;&#x5B58;&#x7684;&#x54CD;&#x5E94;&#x5C06;&#x7ACB;&#x9A6C;&#x4EE5;<code>Observable</code>&#x5F62;&#x5F0F;&#x8FD4;&#x56DE;&#x3002;</p>
+<h2 id="4&#x3001;&#x65AD;&#x8DEF;&#x5668;&#x662F;&#x5426;&#x6253;&#x5F00;&#xFF1F;">4&#x3001;&#x65AD;&#x8DEF;&#x5668;&#x662F;&#x5426;&#x6253;&#x5F00;&#xFF1F;</h2>
+<p>&#x5728;&#x4F60;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x65F6;&#xFF0C;<code>Hystrix</code>&#x5C06;&#x4F1A;&#x68C0;&#x67E5;&#x65AD;&#x8DEF;&#x5668;&#x662F;&#x5426;&#x6253;&#x5F00;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x65AD;&#x8DEF;&#x5668;&#x6253;&#x5F00;&#xFF0C;&#x5219;<code>Hystrix</code>&#x5C31;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#x8BE5;&#x547D;&#x4EE4;&#xFF0C;&#x5C06;&#x4F1A;&#x8DEF;&#x7531;&#x5230;&#x7B2C;8&#x6B65;&#x53BB;&#x6267;&#x884C;&#x964D;&#x7EA7;&#x903B;&#x8F91;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x65AD;&#x8DEF;&#x5668;&#x672A;&#x6253;&#x5F00;&#xFF0C;&#x5C31;&#x4F1A;&#x6267;&#x884C;&#x7B2C;5&#x6B65;&#xFF0C;&#x68C0;&#x67E5;&#x670D;&#x52A1;&#x662F;&#x5426;&#x6709;&#x80FD;&#x529B;&#x53BB;&#x6267;&#x884C;&#x8BE5;&#x547D;&#x4EE4;&#x3002;</p>
+<h2 id="5&#x3001;&#x7EBF;&#x7A0B;&#x6C60;&#x3001;&#x961F;&#x5217;&#x3001;&#x4FE1;&#x53F7;&#x91CF;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x6EE1;&#x4E86;">5&#x3001;&#x7EBF;&#x7A0B;&#x6C60;&#x3001;&#x961F;&#x5217;&#x3001;&#x4FE1;&#x53F7;&#x91CF;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x6EE1;&#x4E86;</h2>
+<p>&#x5982;&#x679C;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x76F8;&#x5173;&#x8054;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;&#x3001;&#x961F;&#x5217;&#xFF08;&#x5982;&#x679C;&#x4E0D;&#x662F;&#x4F7F;&#x7528;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x4FE1;&#x53F7;&#x91CF;&#xFF09;&#x5DF2;&#x7ECF;&#x6EE1;&#x4E86;&#xFF0C;&#x5219;<code>Hystrix</code>&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#x8BE5;&#x547D;&#x4EE4;&#xFF0C;&#x800C;&#x4F1A;&#x8DEF;&#x7531;&#x5230;&#x7B2C;8&#x6B65;&#x53BB;&#x6267;&#x884C;&#x964D;&#x7EA7;&#x903B;&#x8F91;&#x3002;</p>
+<h2 id="6&#x3001;hystrixobservablecommandconstruct&#x6216;hystrixcommandrun">6&#x3001;<code>HystrixObservableCommand.construct()</code>&#x6216;<code>HystrixCommand.run()</code></h2>
+<p>&#x5728;&#x8FD9;&#x91CC;&#xFF0C;<code>Hystrix</code>&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x5BF9;&#x4F9D;&#x8D56;&#x9879;&#x7684;&#x8BF7;&#x6C42;&#xFF1A;</p>
+<ul>
+<li><code>HystrixCommand.run()</code>&#xFF1A;&#x8FD4;&#x56DE;&#x5355;&#x4E00;&#x54CD;&#x5E94;&#x6216;&#x8005;&#x8FD4;&#x56DE;&#x5F02;&#x5E38;</li>
+<li><code>HystrixObservableCommand.construct()</code>&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x53D1;&#x5C04;&#x54CD;&#x5E94;&#x6216;&#x53D1;&#x51FA;<code>onError</code>&#x901A;&#x77E5;&#x7684;<code>Observable</code>&#x5BF9;&#x8C61;</li>
+</ul>
+<p>&#x5982;&#x679C;<code>run()</code>&#x6216;&#x8005;<code>construct()</code>&#x65B9;&#x6CD5;&#x6267;&#x884C;&#x8D85;&#x65F6;&#xFF0C;&#x5219;&#x7EBF;&#x7A0B;&#x5C06;&#x629B;&#x51FA;<code>TimeoutException</code>&#xFF08;&#x5982;&#x679C;&#x547D;&#x4EE4;&#x4E0D;&#x662F;&#x5728;&#x5355;&#x72EC;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x7684;&#x8BDD;&#xFF0C;&#x5219;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x8BA1;&#x65F6;&#x5668;&#x7EBF;&#x7A0B;&#x629B;&#x51FA;&#xFF09;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;<code>Hystrix</code>&#x5C06;&#x4F1A;&#x628A;&#x7ED3;&#x679C;&#x8DEF;&#x7531;&#x5230;&#x7B2C;&#x516B;&#x6B65;&#x6267;&#x884C;&#x964D;&#x7EA7;&#x903B;&#x8F91;&#xFF0C;&#x5982;&#x679C;<code>run()</code>&#x6216;&#x8005;<code>construct()</code>&#x65E0;&#x6CD5;&#x88AB;&#x53D6;&#x6D88;&#x6216;&#x8005;&#x4E2D;&#x65AD;&#xFF0C;&#x5219;&#x8BE5;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x7684;&#x503C;&#x5C06;&#x4F1A;&#x88AB;&#x4E22;&#x5F03;&#x3002;</p>
+<p>&#x8BF7;&#x6CE8;&#x610F;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x65B9;&#x6CD5;&#x80FD;&#x8BA9;&#x6F5C;&#x5728;&#x7684;&#x7EBF;&#x7A0B;&#x5F3A;&#x5236;&#x505C;&#x6B62;&#x5DE5;&#x4F5C;&#xFF0C;<code>Hystrix</code>&#x5728;<code>JVM</code>&#x80FD;&#x505A;&#x7684;&#x5C31;&#x662F;&#x629B;&#x51FA;<code>InterruptedException</code>&#x3002;&#x5982;&#x679C;<code>Hystrix</code>&#x6240;&#x5305;&#x88C5;&#x5DE5;&#x4F5C;&#x7C7B;&#x4E0D;&#x9075;&#x5FAA;<code>InterruptedException</code>&#xFF0C;&#x5373;&#x4F7F;&#x5BA2;&#x6237;&#x7AEF;&#x5DF2;&#x7ECF;&#x6536;&#x5230;<code>TimeouteException</code>&#xFF0C;<code>Hystrix</code>&#x7EBF;&#x7A0B;&#x4E2D;&#x7684;&#x7EBF;&#x7A0B;&#x8FD8;&#x662F;&#x4F1A;&#x7EE7;&#x7EED;&#x5DE5;&#x4F5C;&#x3002;&#x5C3D;&#x7BA1;&#x8D1F;&#x8F7D;&#x5DF2;&#x201C;&#x6B63;&#x786E;&#x91CA;&#x653E;&#x201D;&#xFF0C;&#x4F46;&#x6B64;&#x884C;&#x4E3A;&#x53EF;&#x80FD;&#x4F1A;&#x4F7F;Hystrix&#x7EBF;&#x7A0B;&#x6C60;&#x9971;&#x548C;&#x3002;&#x5927;&#x90E8;&#x5206;<code>Java</code>&#x7684;<code>Http</code>&#x5E93;&#x4E0D;&#x4F1A;&#x4E2D;&#x65AD;<code>InterruptedException</code>&#x3002;&#x6240;&#x4EE5;&#x8BF7;&#x6B63;&#x786E;&#x914D;&#x7F6E;<code>HTTP</code>&#x5BA2;&#x6237;&#x7AEF;&#x4E0A;&#x7684;&#x94FE;&#x63A5;&#x548C;&#x8BFB;&#x3001;&#x5199;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x4EFB;&#x4F55;&#x5F02;&#x5E38;&#xFF0C;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7ED3;&#x679C;&#xFF0C;<code>Hystrix</code>&#x4F1A;&#x6267;&#x884C;&#x4E00;&#x4E9B;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x548C;&#x6307;&#x6807;&#x62A5;&#x544A;&#x540E;&#x8FD4;&#x56DE;&#x6B64;&#x54CD;&#x5E94;&#x3002;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x6267;&#x884C;<code>run()</code>&#xFF0C;<code>Hystrix</code>&#x5C06;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x53D1;&#x5C04;&#x5355;&#x4E00;&#x54CD;&#x5E94;&#x7684;<code>Observable</code>&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x53D1;&#x51FA;<code>onCompleted()</code>&#x901A;&#x77E5;&#xFF1B;&#x5982;&#x679C;&#x662F;<code>construct()</code>&#xFF0C;<code>Hystrix</code>&#x5C06;&#x8FD4;&#x56DE;&#x540C;&#x6837;&#x7684;<code>Observable</code>&#x5BF9;&#x8C61;&#x3002;</p>
+<h2 id="7&#x3001;&#x8BA1;&#x7B97;&#x65AD;&#x8DEF;&#x5668;&#x7684;&#x5065;&#x5EB7;">7&#x3001;&#x8BA1;&#x7B97;&#x65AD;&#x8DEF;&#x5668;&#x7684;&#x5065;&#x5EB7;</h2>
+<p><code>Hystrix</code>&#x5C06;&#x5065;&#x5EB7;&#x3001;&#x5931;&#x8D25;&#x3001;&#x62D2;&#x7EDD;&#x3001;&#x8D85;&#x65F6;&#x7684;&#x8BF7;&#x6C42;&#x72B6;&#x6001;&#x6570;&#x636E;&#x53D1;&#x9001;&#x7ED9;&#x65AD;&#x8DEF;&#x5668;&#xFF0C;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x7528;&#x6765;&#x8BA1;&#x7B97;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x8BA1;&#x7B97;<code>counter</code>&#x3002;</p>
+<p>&#x5B83;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x7EDF;&#x8BA1;&#x4FE1;&#x606F;&#x6765;&#x786E;&#x5B9A;&#x65AD;&#x8DEF;&#x5668;&#x4F55;&#x65F6;&#x5E94;&#x6253;&#x5F00;&#xFF0C;&#x5728;&#x8BE5;&#x65F6;&#x95F4;&#x70B9;&#x5B83;&#x4F1A;&#x5C06;&#x968F;&#x540E;&#x7684;&#x6240;&#x6709;&#x8BF7;&#x6C42;&#x77ED;&#x8DEF;&#xFF0C;&#x76F4;&#x5230;&#x7ECF;&#x8FC7;&#x6062;&#x590D;&#x671F;&#x4E3A;&#x6B62;&#xFF0C;&#x5728;&#x6B64;&#x4E4B;&#x540E;&#xFF0C;&#x5728;&#x9996;&#x5148;&#x68C0;&#x67E5;&#x67D0;&#x4E9B;&#x8FD0;&#x884C;&#x72B6;&#x51B5;&#x68C0;&#x67E5;&#x4E4B;&#x540E;&#xFF0C;&#x5B83;&#x5C06;&#x518D;&#x6B21;&#x5173;&#x95ED;&#x65AD;&#x8DEF;&#x5668;&#x3002;</p>
+<h2 id="8&#x3001;&#x964D;&#x7EA7;&#x903B;&#x8F91;">8&#x3001;&#x964D;&#x7EA7;&#x903B;&#x8F91;</h2>
+<p>&#x5F53;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x5931;&#x8D25;&#x65F6;&#xFF0C;<code>Hystrix</code>&#x4F1A;&#x5C1D;&#x8BD5;&#x5C06;&#x9519;&#x8BEF;&#x8F6C;&#x6362;&#x5230;&#x964D;&#x7EA7;&#x903B;&#x8F91;&#x4E0A;&#xFF1A;</p>
+<ul>
+<li>&#x5728;&#x7B2C;6&#x6B65;&#xFF0C;&#x6267;&#x884C;<code>run()</code>&#x3001;<code>construct()</code>&#x65B9;&#x6CD5;&#x629B;&#x51FA;&#x5F02;&#x5E38;</li>
+<li>&#x5728;&#x7B2C;4&#x6B65;&#xFF0C;&#x65AD;&#x8DEF;&#x5668;&#x5904;&#x4E8E;&#x6253;&#x5F00;&#x72B6;&#x6001;&#x65F6;</li>
+<li>&#x5728;&#x7B2C;5&#x6B65;&#xFF0C;&#x547D;&#x4EE4;&#x7EBF;&#x7A0B;&#x6C60;&#x3001;&#x961F;&#x5217;&#x3001;&#x4FE1;&#x53F7;&#x91CF;&#x5904;&#x4E8E;&#x9971;&#x548C;&#x72B6;&#x6001;&#x65F6;</li>
+<li>&#x6216;&#x8005;&#x5728;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x65F6;&#xFF0C;&#x8D85;&#x65F6;&#x4E86;</li>
+</ul>
+<p>&#x7F16;&#x5199;&#x964D;&#x7EA7;&#x903B;&#x8F91;&#xFF0C;&#x4EE5;&#x4ECE;&#x5185;&#x5B58;&#x4E2D;&#x7F13;&#x5B58;&#x6216;&#x901A;&#x8FC7;&#x5176;&#x4ED6;&#x9759;&#x6001;&#x903B;&#x8F91;&#x63D0;&#x4F9B;&#x901A;&#x7528;&#x54CD;&#x5E94;&#xFF0C;&#x800C;&#x65E0;&#x9700;&#x4EFB;&#x4F55;&#x7F51;&#x7EDC;&#x4F9D;&#x8D56;&#x6027;&#x3002;&#x5982;&#x679C;&#x4F60;&#x975E;&#x8981;&#x5728;&#x964D;&#x7EA7;&#x903B;&#x8F91;&#x4E2D;&#x4F7F;&#x7528;&#x7F51;&#x7EDC;&#x8C03;&#x7528;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x53E6;&#x4E00;&#x4E2A;<code>HystrixCommand</code>&#x6216;&#x8005;<code>HystrixObservableCommand</code>&#x3002;</p>
+<p>&#x5728;<code>HystrixCommand</code>&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x8FD4;&#x56DE;&#x5355;&#x4E00;&#x503C;&#x7684;<code>HystrixCommand.getFallback()</code>&#x7684;&#x964D;&#x7EA7;&#x903B;&#x8F91;&#x3002;</p>
+<p>&#x5728;<code>HystrixObservableCommand.resumeWithFallback()</code>&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x8FD4;&#x56DE;<code>Observable</code>&#x5BF9;&#x8C61;&#x7684;<code>HystrixObservableCommand.resumeWithFallback()</code>&#x6765;&#x5B9E;&#x73B0;&#x964D;&#x7EA7;&#x903B;&#x8F91;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x964D;&#x7EA7;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x54CD;&#x5E94;&#x503C;&#xFF0C;&#x5219;<code>Hystrix</code>&#x4F1A;&#x628A;&#x8FD9;&#x4E2A;&#x54CD;&#x5E94;&#x503C;&#x8FD4;&#x56DE;&#x7ED9;&#x8C03;&#x7528;&#x8005;&#x3002;&#x5728;<code>HystrixCommand.getFallback()</code>&#x4E0B;&#xFF0C;&#x5B83;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x53D1;&#x5C04;&#x4ECE;&#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x503C;&#x7684;<code>Observable</code>&#x5BF9;&#x8C61;&#x3002;&#x5728;<code>HystrixObservableCommand.resumeWithFallback()</code>&#x4F1A;&#x8FD4;&#x56DE;&#x76F8;&#x540C;&#x7684;<code>Observable</code>&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5C1A;&#x672A;&#x4E3A;<code>Hystrix</code>&#x547D;&#x4EE4;&#x5B9E;&#x73B0;&#x964D;&#x7EA7;&#x65B9;&#x6CD5;&#xFF0C;&#x6216;&#x8005;&#x964D;&#x7EA7;&#x65B9;&#x6CD5;&#x672C;&#x8EAB;&#x5F15;&#x53D1;&#x5F02;&#x5E38;&#xFF0C;&#x5219;<code>Hystrix</code>&#x4ECD;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>Observable</code>&#x5BF9;&#x8C61;&#xFF0C;&#x4F46;&#x5B83;&#x4E0D;&#x53D1;&#x51FA;&#x4EFB;&#x4F55;&#x5185;&#x5BB9;&#x5E76;&#x7ACB;&#x5373;&#x4EE5;<code>onError</code>&#x901A;&#x77E5;&#x7EC8;&#x6B62;&#x3002; &#x901A;&#x8FC7;&#x6B64;<code>onError</code>&#x901A;&#x77E5;&#xFF0C;&#x5C06;&#x5BFC;&#x81F4;&#x547D;&#x4EE4;&#x5931;&#x8D25;&#x7684;&#x5F02;&#x5E38;&#x53D1;&#x9001;&#x56DE;&#x8C03;&#x7528;&#x65B9;&#x3002; &#xFF08;&#x5B9E;&#x65BD;&#x4E00;&#x4E2A;&#x53EF;&#x80FD;&#x4F1A;&#x5931;&#x8D25;&#x7684;&#x964D;&#x7EA7;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x7CDF;&#x7CD5;&#x7684;&#x505A;&#x6CD5;&#x3002;&#x60A8;&#x5E94;&#x8BE5;&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x4E0D;&#x53EF;&#x80FD;&#x5931;&#x8D25;&#x7684;&#x964D;&#x7EA7;&#x65B9;&#x6CD5;&#x3002;&#xFF09;</p>
+<p>&#x4E0D;&#x540C;&#x65B9;&#x5F0F;&#x8C03;&#x7528;<code>Hystrix</code>&#x547D;&#x4EE4;&#xFF0C;&#x5176;&#x5931;&#x8D25;&#x6216;&#x8005;&#x4E0D;&#x5B58;&#x5728;&#x964D;&#x7EA7;&#x65B9;&#x6CD5;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x4E5F;&#x4F1A;&#x4E0D;&#x540C;&#xFF1A;</p>
+<ul>
+<li><code>execute()</code>&#xFF1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;</li>
+<li><code>queue()</code>&#xFF1A;&#x6210;&#x529F;&#x8FD4;&#x56DE;<code>Future</code>&#x5BF9;&#x8C61;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x8C03;&#x7528;<code>get()</code>&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;<code>Future</code>&#x5BF9;&#x8C61;&#x5C31;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;</li>
+<li><code>observe()</code>&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>Observable</code>&#x5BF9;&#x8C61;&#xFF0C;&#x5F53;&#x4F60;&#x8BA2;&#x9605;&#x5B83;&#x65F6;&#xFF0C;&#x5B83;&#x5C06;&#x901A;&#x8FC7;&#x8C03;&#x7528;&#x8BA2;&#x9605;&#x8005;&#x7684;<code>onError</code>&#x65B9;&#x6CD5;&#x7ACB;&#x5373;&#x7EC8;&#x6B62;</li>
+<li><code>toObservable()</code>&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>Observable</code>&#xFF0C;&#x5F53;&#x60A8;&#x8BA2;&#x9605;&#x5B83;&#x65F6;&#xFF0C;&#x5B83;&#x5C06;&#x901A;&#x8FC7;&#x8C03;&#x7528;&#x8BA2;&#x9605;&#x8005;&#x7684;<code>onError</code>&#x65B9;&#x6CD5;&#x7EC8;&#x6B62;</li>
+</ul>
+<h2 id="9&#x3001;&#x8FD4;&#x56DE;&#x6210;&#x529F;&#x7684;&#x54CD;&#x5E94;">9&#x3001;&#x8FD4;&#x56DE;&#x6210;&#x529F;&#x7684;&#x54CD;&#x5E94;</h2>
+<p>&#x5982;&#x679C;<code>Hystrix</code>&#x547D;&#x4EE4;&#x6267;&#x884C;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x4F1A;&#x8FD4;&#x56DE;&#x54CD;&#x5E94;&#x6216;&#x8005;&#x4EE5;<code>Observable</code>&#x5BF9;&#x8C61;&#x8FD4;&#x56DE;&#x7ED9;&#x8C03;&#x7528;&#x8005;&#x3002;&#x8FD9;&#x53D6;&#x51B3;&#x4E8E;&#x4F60;&#x5728;&#x7B2C;2&#x6B65;&#x5982;&#x4F55;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF0C;<code>Observable</code>&#x5728;&#x8FD4;&#x56DE;&#x4F60;&#x4E4B;&#x524D;&#xFF0C;&#x4F1A;&#x7ECF;&#x8FC7;&#x4EE5;&#x4E0B;&#x8F6C;&#x53D8;&#xFF1A;</p>
+<p><img src="images/hystrix-return-flow.png" alt=""></p>
+<ul>
+<li><code>execute()</code>&#xFF1A;&#x8DDF;<code>.queue()</code>&#x65B9;&#x6CD5;&#x4E00;&#x6837;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>Future()</code>&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x4ECE;<code>Future</code>&#x4E0A;&#x8C03;&#x7528;<code>get()</code>&#x65B9;&#x6CD5;&#x5C31;&#x4F1A;&#x8FD4;&#x56DE;<code>Observable</code>&#x53D1;&#x5C04;&#x51FA;&#x7684;&#x5355;&#x4E00;&#x503C;</li>
+<li><code>queue()</code>&#xFF1A;&#x5C06;<code>Observable</code>&#x8F6C;&#x6362;&#x5230;<code>BlockingObservable</code>&#xFF0C;&#x8FD9;&#x6837;&#x5B83;&#x5C31;&#x53EF;&#x4EE5;&#x8F6C;&#x6362;&#x6210;<code>Future</code>&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;</li>
+<li><code>observe()</code>&#xFF1A;&#x5728;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x7684;&#x6D41;&#x7A0B;&#x4E4B;&#x524D;&#xFF0C;&#x5C31;&#x8BA2;&#x9605;<code>Observable</code>&#xFF1B; &#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<code>Observable</code>&#xFF0C;&#x5F53;&#x60A8;&#x8BA2;&#x9605;&#x8BE5;<code>Observable</code>&#x65F6;&#xFF0C;&#x5C06;&#x4F1A;&#x53D1;&#x51FA;&#x901A;&#x77E5;</li>
+<li><code>toObservable()</code>&#xFF1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x672A;&#x88AB;&#x6539;&#x53D8;&#x8FC7;&#x7684;<code>Observable</code>&#x5BF9;&#x8C61;&#xFF1B;&#x4F60;&#x5FC5;&#x987B;&#x5728;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x4E4B;&#x524D;&#x5C31;&#x8BA2;&#x9605;&#x5B83;</li>
+</ul>
+<h1 id="&#x65AD;&#x8DEF;&#x5668;">&#x65AD;&#x8DEF;&#x5668;</h1>
+<p>&#x4E0B;&#x56FE;&#x5C55;&#x793A;&#x4E86;<code>HystrixCommand</code>&#x3001;<code>HystrixObservableCommand</code>&#x4E0E;<code>HystrixCircuitBreaker</code>&#x5BF9;&#x8C61;&#x662F;&#x5982;&#x4F55;&#x4EA4;&#x4E92;&#x7684;&#x3001;&#x903B;&#x8F91;&#x6D41;&#x7A0B;&#x548C;&#x5982;&#x4F55;&#x505A;&#x51B3;&#x5B9A;&#x7684;&#xFF0C;&#x4EE5;&#x53CA;&#x65AD;&#x8DEF;&#x5668;&#x5185;&#x90E8;<code>counter</code>&#x7684;&#x884C;&#x4E3A;&#x3002;</p>
+<p><img src="images/circuit-breaker.png" alt=""></p>
+<p>&#x65AD;&#x8DEF;&#x5668;&#x6253;&#x5F00;&#x3001;&#x5173;&#x95ED;&#x7684;&#x8BE6;&#x7EC6;&#x63CF;&#x8FF0;&#xFF1A;</p>
+<ul>
+<li>&#x5047;&#x8BBE;&#x65AD;&#x8DEF;&#x5668;&#x4E0A;&#x5927;&#x91CF;&#x7684;&#x8BF7;&#x6C42;&#x8D85;&#x8FC7;&#x4E86;&#x9608;&#x503C;&#xFF0C;<code>HystrixCommandProperties.circuitBreakerRequestVolumeThreshold()</code></li>
+<li>&#x5047;&#x8BBE;&#x9519;&#x8BEF;&#x767E;&#x5206;&#x6BD4;&#x8D85;&#x8FC7;&#x9608;&#x503C;&#x9519;&#x8BEF;&#x767E;&#x5206;&#x6BD4;&#xFF0C;<code>HystrixCommandProperties.circuitBreakerErrorThresholdPercentage()</code></li>
+<li>&#x7136;&#x540E;&#xFF0C;&#x65AD;&#x8DEF;&#x5668;&#x7684;&#x72B6;&#x6001;&#x4ECE;<code>CLOSE</code>&#x5230;<code>OPEN</code></li>
+<li>&#x5F53;&#x65AD;&#x8DEF;&#x5668;&#x5904;&#x4E8E;<code>OPEN</code>&#x72B6;&#x6001;&#x65F6;&#xFF0C;&#x65AD;&#x8DEF;&#x5668;&#x4F1A;&#x62E6;&#x622A;&#x6240;&#x6709;&#x7684;&#x8BF7;&#x6C42;</li>
+<li>&#x8FC7;&#x4E86;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x540E;<code>HystrixCommandProperties.circuitBreakerSleepWindowInMilliseconds()</code>&#xFF0C;&#x4E0B;&#x4E00;&#x4E2A;&#x5355;&#x4E2A;&#x8BF7;&#x6C42;&#x8BA9;&#x5B83;&#x901A;&#x8FC7;&#xFF08;&#x6B64;&#x65F6;&#x65AD;&#x8DEF;&#x5668;&#x5904;&#x4E8E;<code>HALF-OPEN</code>&#x72B6;&#x6001;&#xFF09;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x8BF7;&#x6C42;&#x5931;&#x8D25;&#xFF0C;&#x65AD;&#x8DEF;&#x5668;&#x8F6C;&#x6362;&#x5230;<code>OPEN</code>&#x72B6;&#x6001;&#xFF1B;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x8BF7;&#x6C42;&#x6210;&#x529F;&#xFF0C;&#x65AD;&#x8DEF;&#x5668;&#x5C31;&#x8F6C;&#x6362;&#x5230;<code>CLOSE</code>&#x72B6;&#x6001;&#x3002;</li>
+</ul>
+<h1 id="&#x9694;&#x79BB;">&#x9694;&#x79BB;</h1>
+<p><code>Hystrix</code>&#x4F7F;&#x7528;&#x9694;&#x677F;&#x6A21;&#x5F0F;&#x5C06;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x5F7C;&#x6B64;&#x9694;&#x79BB;&#xFF0C;&#x5E76;&#x9650;&#x5236;&#x5BF9;&#x5176;&#x4E2D;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x7684;&#x5E76;&#x53D1;&#x8BBF;&#x95EE;&#x3002;</p>
+<p><img src="images/soa-5-isolation-focused.png" alt=""></p>
+<h2 id="&#x7EBF;&#x7A0B;&#x548C;&#x7EBF;&#x7A0B;&#x6C60;">&#x7EBF;&#x7A0B;&#x548C;&#x7EBF;&#x7A0B;&#x6C60;</h2>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x5728;&#x5404;&#x81EA;&#x7684;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#x3002;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x5C06;&#x5B83;&#x4EEC;&#x4E0E;&#x8C03;&#x7528;&#x7EBF;&#x7A0B;&#xFF08;<code>Tomcat</code>&#x7EBF;&#x7A0B;&#x6C60;&#xFF09;&#x9694;&#x79BB;&#xFF0C;&#x4EE5;&#x4FBF;&#x8C03;&#x7528;&#x8005;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x82B1;&#x8D39;&#x592A;&#x957F;&#x65F6;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x9879;&#x8C03;&#x7528;&#x3002;</p>
+<p><code>Hystrix</code>&#x5BF9;&#x6BCF;&#x4E2A;&#x4F9D;&#x8D56;&#x670D;&#x52A1;&#x4F7F;&#x7528;&#x5355;&#x72EC;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;&#xFF0C;&#x8FD9;&#x6837;&#x5373;&#x4F7F;&#x8BE5;&#x670D;&#x52A1;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;&#x8FBE;&#x5230;&#x9971;&#x548C;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x4E5F;&#x53EA;&#x4F1A;&#x5F71;&#x54CD;&#x8BE5;&#x670D;&#x52A1;&#x81EA;&#x5DF1;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;&#x3002;</p>
+<p><img src="images/request-example-with-latency.png" alt=""></p>
+<p>&#x5982;&#x679C;&#x4E0D;&#x662F;&#x8FD9;&#x79CD;&#x7EBF;&#x7A0B;&#x6C60;&#x6280;&#x672F;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x5931;&#x8D25;&#xFF0C;&#x4F46;&#x8FD9;&#x8981;&#x6C42;&#x4F60;&#x4E00;&#x76F4;&#x5145;&#x5206;&#x4FE1;&#x4EFB;&#x6240;&#x6709;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x5E76;&#x4E14;&#x80FD;&#x5728;&#x5931;&#x8D25;&#x540E;&#xFF0C;&#x5FEB;&#x901F;&#x54CD;&#x5E94;&#x3002;</p>
+<p><code>Netflix</code>&#x8BBE;&#x8BA1;<code>Hystrix</code>&#x65F6;&#xFF0C;&#x91C7;&#x7528;&#x7EBF;&#x7A0B;&#x3001;&#x7EBF;&#x7A0B;&#x9694;&#x79BB;&#x6280;&#x672F;&#x6765;&#x8FBE;&#x6210;&#x9694;&#x79BB;&#x7684;&#x4E3B;&#x8981;&#x539F;&#x56E0;&#x6709;&#xFF1A;</p>
+<ul>
+<li>&#x8BB8;&#x591A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x9488;&#x5BF9;&#x7531;&#x8BB8;&#x591A;&#x4E0D;&#x540C;&#x56E2;&#x961F;&#x5F00;&#x53D1;&#x7684;&#x6570;&#x5341;&#x79CD;&#x4E0D;&#x540C;&#x670D;&#x52A1;&#x6267;&#x884C;&#x6570;&#x5341;&#x79CD;&#xFF08;&#x6709;&#x65F6;&#x751A;&#x81F3;&#x8D85;&#x8FC7;100&#x79CD;&#xFF09;&#x4E0D;&#x540C;&#x7684;&#x540E;&#x7AEF;&#x670D;&#x52A1;&#x8C03;&#x7528;</li>
+<li>&#x6BCF;&#x4E2A;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x81EA;&#x5DF1;&#x5BA2;&#x6237;&#x7AEF;&#x5E93;</li>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x5E93;&#x53EF;&#x80FD;&#x603B;&#x662F;&#x5728;&#x6539;&#x53D8;</li>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x80FD;&#x4F1A;&#x65B0;&#x589E;&#x8C03;&#x7528;&#x903B;&#x8F91;</li>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x53EF;&#x80FD;&#x5305;&#x542B;&#x91CD;&#x8BD5;&#x3001;&#x89E3;&#x6790;&#x3001;&#x7F13;&#x5B58;&#x7B49;&#x5176;&#x4ED6;&#x884C;&#x4E3A;&#x7684;&#x903B;&#x8F91;</li>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x5E93;&#x5F80;&#x5F80;&#x50CF;&#x662F;&#x9ED1;&#x76D2;&#x7684;&#xFF1A;&#x7528;&#x6237;&#x5BF9;&#x5176;&#x5B9E;&#x73B0;&#x7EC6;&#x8282;&#xFF0C;&#x7F51;&#x7EDC;&#x8BBF;&#x95EE;&#x6A21;&#x5F0F;&#xFF0C;&#x914D;&#x7F6E;&#x9ED8;&#x8BA4;&#x503C;&#x7B49;&#x4E0D;&#x900F;&#x660E;</li>
+<li>&#x5728;&#x771F;&#x5B9E;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4E0B;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#x8C03;&#x6574;&#x53C2;&#x6570;&#x503C;&#x3001;&#x6216;&#x8005;&#x5BA2;&#x6237;&#x7AEF;&#x8C03;&#x6574;&#x4E86;&#x67D0;&#x4E9B;&#x884C;&#x4E3A;&#xFF0C;&#x6BD4;&#x5982;&#x8BF4;&#xFF1A;&#x63A5;&#x53E3;&#x7684;<code>QPS</code>&#x503C;</li>
+<li>&#x5373;&#x4F7F;&#x5BA2;&#x6237;&#x7AEF;&#x672C;&#x8EAB;&#x6CA1;&#x6709;&#x53D8;&#x5316;&#xFF0C;&#x670D;&#x52A1;&#x672C;&#x8EAB;&#x4E5F;&#x4F1A;&#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF0C;&#x8FD9;&#x53EF;&#x80FD;&#x4F1A;&#x5F71;&#x54CD;&#x6027;&#x80FD;&#x7279;&#x5F81;&#xFF0C;&#x8FDB;&#x800C;&#x5BFC;&#x81F4;&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;&#x65E0;&#x6548;</li>
+<li>&#x4F20;&#x9012;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x53EF;&#x80FD;&#x4F1A;&#x5F15;&#x5165;&#x5176;&#x4ED6;&#x610F;&#x5916;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x5E93;&#xFF0C;&#x8FD9;&#x4E9B;&#x5BA2;&#x6237;&#x7AEF;&#x5E93;&#x53EF;&#x80FD;&#x4E0D;&#x662F;&#x9884;&#x671F;&#x7684;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x914D;&#x7F6E;&#x4E0D;&#x6B63;&#x786E;</li>
+<li>&#x5927;&#x591A;&#x6570;&#x7F51;&#x7EDC;&#x8BBF;&#x95EE;&#x662F;&#x540C;&#x6B65;&#x6267;&#x884C;&#x7684;</li>
+<li>&#x5F02;&#x5E38;&#x548C;&#x5EF6;&#x8FDF;&#x4E5F;&#x53EF;&#x80FD;&#x5728;&#x5BA2;&#x6237;&#x7AEF;&#x4EE3;&#x7801;&#x4E2D;&#x53D1;&#x751F;&#xFF0C;&#x800C;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;&#x5728;&#x7F51;&#x7EDC;&#x8C03;&#x7528;&#x4E2D;</li>
+</ul>
+<p><img src="images/isolation-options.png" alt=""></p>
+<h3 id="&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x597D;&#x5904;">&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x597D;&#x5904;</h3>
+<p>&#x5728;&#x670D;&#x52A1;&#x81EA;&#x5DF1;&#x7EBF;&#x7A0B;&#x6C60;&#x4F7F;&#x7528;&#x7EBF;&#x7A0B;&#x9694;&#x79BB;&#x7684;&#x597D;&#x5904;&#xFF1A;</p>
+<ul>
+<li>&#x8BE5;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D7;&#x5230;&#x5B8C;&#x5168;&#x4FDD;&#x62A4;&#xFF0C;&#x53EF;&#x9632;&#x6B62;&#x5BA2;&#x6237;&#x7AEF;&#x5E93;&#x5931;&#x63A7;&#x3002; &#x7ED9;&#x5B9A;&#x4F9D;&#x8D56;&#x5E93;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;&#x9971;&#x6EE1;&#x7684;&#x8BDD;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x5176;&#x4F59;&#x90E8;&#x5206;</li>
+<li>&#x53EF;&#x4EE5;&#x8BA9;&#x5E94;&#x7528;&#x5728;&#x5F15;&#x5165;&#x65B0;&#x7684;&#x670D;&#x52A1;&#x65F6;&#xFF0C;&#x964D;&#x4F4E;&#x98CE;&#x9669;&#x3002;&#x5982;&#x679C;&#x65B0;&#x7684;&#x670D;&#x52A1;&#x53D1;&#x751F;&#x5F02;&#x5E38;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x7ACB;&#x9A6C;&#x9694;&#x79BB;&#x8FD9;&#x4E2A;&#x670D;&#x52A1;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x4E86;</li>
+</ul>
+<blockquote>
+<p>&#x8FD9;&#x4E2A;&#x597D;&#x5904;&#x5176;&#x5B9E;&#x5F88;&#x6709;&#x610F;&#x601D;&#x3002;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x4E0D;&#x5F71;&#x54CD;&#x7EBF;&#x4E0A;&#x8FD0;&#x884C;</p>
+</blockquote>
+<ul>
+<li>&#x5F53;&#x53D1;&#x751F;&#x6545;&#x969C;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x518D;&#x6B21;&#x6062;&#x590D;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x7EBF;&#x7A0B;&#x6C60;&#x5C06;&#x88AB;&#x6E05;&#x9664;&#xFF0C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5C06;&#x7ACB;&#x5373;&#x6062;&#x590D;&#x8FD0;&#x884C;&#x6B63;&#x5E38;&#x7684;&#x6027;&#x80FD;&#xFF0C;&#x800C;&#x6574;&#x4E2A;<code>Tomcat</code>&#x5BB9;&#x5668;&#x4E0D;&#x582A;&#x91CD;&#x8D1F;&#x5219;&#x9700;&#x8981;&#x5F88;&#x957F;&#x65F6;&#x95F4;&#x624D;&#x80FD;&#x6062;&#x590D;</li>
+<li>&#x5982;&#x679C;&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;&#x9519;&#x8BEF;&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6025;&#x5267;&#x589E;&#x52A0;&#x7684;&#x9519;&#x8BEF;&#x3001;&#x5EF6;&#x8FDF;&#x3001;&#x8D85;&#x65F6;&#x3001;&#x62D2;&#x7EDD;&#x7B49;&#x6570;&#x91CF;&#x8868;&#x73B0;&#x51FA;&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x5065;&#x5EB7;&#x60C5;&#x51B5;&#x3002;&#x7136;&#x540E;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FD1;&#x4E4E;&#x5B9E;&#x65F6;&#x52A8;&#x6001;&#x914D;&#x7F6E;&#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x4E9B;&#x95EE;&#x9898;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x4E0D;&#x5F71;&#x54CD;&#x7A0B;&#x5E8F;&#x529F;&#x80FD;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5904;&#x7406;&#x9519;&#x8BEF;&#x3002;</li>
+<li>&#x5982;&#x679C;&#x5BA2;&#x6237;&#x7AEF;&#x670D;&#x52A1;&#x8C03;&#x6574;&#x4E86;&#x6027;&#x80FD;&#x5C5E;&#x6027;&#xFF08;&#x8FD9;&#x901A;&#x5E38;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF09;&#xFF0C;&#x90A3;&#x4E48;&#x5BF9;&#x5E94;&#x670D;&#x52A1;&#x5C31;&#x9700;&#x8981;&#x8C03;&#x6574;&#x5C5E;&#x6027;&#xFF08;&#x6BD4;&#x5982;&#x589E;&#x52A0;&#x3001;&#x51CF;&#x5C11;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF1B;&#x6539;&#x53D8;&#x91CD;&#x8BD5;&#x6B21;&#x6570;&#xFF09;&#x3002;&#x8FD9;&#x91CC;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8C03;&#x6574;&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x5C5E;&#x6027;&#xFF08;&#x9519;&#x8BEF;&#x3001;&#x5EF6;&#x8FDF;&#x3001;&#x8D85;&#x65F6;&#x3001;&#x62D2;&#x7EDD;&#xFF09;&#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x79CD;&#x95EE;&#x9898;&#xFF0C;&#x800C;&#x4E14;&#x8FD8;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5BA2;&#x6237;&#x7AEF;&#x3001;&#x8BF7;&#x6C42;&#x3001;&#x7528;&#x6237;&#x7684;&#x64CD;&#x4F5C;&#x3002;</li>
+</ul>
+<blockquote>
+<p>&#x8FD9;&#x4E2A;&#x610F;&#x601D;&#x5C31;&#x662F;&#x6307;&#x5F53;&#x4E0B;&#x6E38;&#x670D;&#x52A1;&#x964D;&#x4F4E;&#x63A5;&#x53E3;&#x7684;<code>QPS</code>&#x65F6;&#xFF0C;&#x4F60;&#x518D;&#x7ED9;<code>Hystrix</code>&#x4E2D;&#x8FD9;&#x4E2A;&#x670D;&#x52A1;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;&#x63D0;&#x4F9B;&#x90A3;&#x4E48;&#x591A;&#x7684;&#x7EBF;&#x7A0B;&#x5176;&#x5B9E;&#x662F;&#x65E0;&#x7528;&#x7684;&#x3002;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x81EA;&#x5DF1;&#x670D;&#x52A1;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4FEE;&#x6539;&#x8FD9;&#x4E2A; &#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x5C5E;&#x6027;&#x6765;&#x63A7;&#x5236;&#x81EA;&#x5DF1;&#x670D;&#x52A1;&#x5BF9;&#x4F9D;&#x8D56;&#x670D;&#x52A1;&#x7684;<code>QPS</code></p>
+</blockquote>
+<ul>
+<li>&#x9664;&#x4E86;&#x9694;&#x79BB;&#x4F18;&#x52BF;&#x4E4B;&#x5916;&#xFF0C;&#x62E5;&#x6709;&#x4E13;&#x7528;&#x7684;&#x7EBF;&#x7A0B;&#x6C60;&#x8FD8;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x5185;&#x7F6E;&#x7684;&#x5E76;&#x53D1;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x8FD9;&#x4E9B;&#x5E76;&#x53D1;&#x6027;&#x5728;&#x540C;&#x6B65;&#x5BA2;&#x6237;&#x7AEF;&#x4E4B;&#x4E0A;&#x6784;&#x5EFA;&#x5F02;&#x6B65;&#x64CD;&#x4F5C;&#xFF08;&#x7C7B;&#x4F3C;&#x4E8E;<code>Netflix API</code>&#x5982;&#x4F55;&#x5728;<code>Hystrix</code>&#x547D;&#x4EE4;&#x4E0A;&#x6784;&#x5EFA;&#x5F02;&#x6B65;&#x7684;<code>Java API</code>&#xFF09;</li>
+</ul>
+<p>&#x7B80;&#x800C;&#x8A00;&#x4E4B;&#xFF0C;&#x7EBF;&#x7A0B;&#x6C60;&#x63D0;&#x4F9B;&#x7684;&#x9694;&#x79BB;&#x5141;&#x8BB8;&#x5BA2;&#x6237;&#x7AEF;&#x5E93;&#x548C;&#x5B50;&#x7CFB;&#x7EDF;&#x6027;&#x80FD;&#x7279;&#x5F81;&#x7684;&#x4E0D;&#x65AD;&#x53D8;&#x5316;&#x548C;&#x52A8;&#x6001;&#x7EC4;&#x5408;&#x5F97;&#x5230;&#x4F18;&#x96C5;&#x5904;&#x7406;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x9020;&#x6210;&#x4E2D;&#x65AD;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5C3D;&#x7BA1;&#x4F7F;&#x7528;&#x5355;&#x72EC;&#x7EBF;&#x7A0B;&#x63D0;&#x4F9B;&#x9694;&#x79BB;&#x7279;&#x6027;&#xFF0C;&#x4F46;&#x662F;&#x60A8;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x4EE3;&#x7801;&#x4E5F;&#x5E94;&#x8BE5;&#x5177;&#x6709;&#x8D85;&#x65F6;&#x3001;&#x5BF9;&#x7EBF;&#x7A0B;&#x4E2D;&#x65AD;&#x54CD;&#x5E94;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x4E0D;&#x4F1A;&#x65E0;&#x9650;&#x671F;&#x963B;&#x585E;&#x4F4F;&#x7EBF;&#x7A0B;&#x6C60;&#xFF0C;&#x4ECE;&#x800C;&#x5BFC;&#x81F4;&#x7EBF;&#x7A0B;&#x6C60;&#x8D44;&#x6E90;&#x8017;&#x5C3D;&#x3002;</p>
+<h3 id="&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x7F3A;&#x70B9;">&#x7EBF;&#x7A0B;&#x6C60;&#x7684;&#x7F3A;&#x70B9;</h3>
+<p>&#x7EBF;&#x7A0B;&#x6C60;&#x6700;&#x4E3B;&#x8981;&#x7684;&#x7F3A;&#x70B9;&#x5C31;&#x662F;&#x589E;&#x52A0;&#x4E86;&#x989D;&#x5916;&#x7684;&#x8BA1;&#x7B97;&#x5F00;&#x9500;&#x3002;&#x5728;&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x65F6;&#x90FD;&#x53EF;&#x4EE5;&#x6D89;&#x53CA;&#x5230;&#x961F;&#x5217;&#x3001;&#x5B9A;&#x65F6;&#x3001;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#x3002;</p>
+<p><code>Neyflix</code>&#x5728;&#x8BBE;&#x8BA1;&#x8FD9;&#x4E2A;&#x7CFB;&#x7EDF;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x89C9;&#x5F97;&#x63A5;&#x53D7;&#x8FD9;&#x79CD;&#x4EE3;&#x4EF7;&#x6765;&#x6362;&#x53D6;&#x4F18;&#x70B9;&#xFF0C;&#x5E76;&#x4E14;&#x8BA4;&#x4E3A;&#x8FD9;&#x79CD;&#x7F3A;&#x70B9;&#x5E76;&#x4E0D;&#x4F1A;&#x5BF9;&#x6027;&#x80FD;&#x6709;&#x592A;&#x591A;&#x5F71;&#x54CD;&#x3002;</p>
+<h3 id="&#x7EBF;&#x7A0B;&#x7684;&#x5F00;&#x9500;">&#x7EBF;&#x7A0B;&#x7684;&#x5F00;&#x9500;</h3>
+<p><code>Hystrix</code>&#x5728;&#x5B50;&#x7EBF;&#x7A0B;&#x4E0A;&#x6D4B;&#x8BD5;&#x6267;&#x884C;<code>construct()</code>&#x3001;<code>run()</code>&#x65B9;&#x6CD5;&#x7684;&#x5EF6;&#x8FDF;&#xFF0C;&#x4E5F;&#x4F1A;&#x6536;&#x96C6;&#x7236;&#x7EBF;&#x7A0B;&#x6574;&#x4F53;&#x65B9;&#x6CD5;&#x7684;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x3002;&#x8FD9;&#x6837;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;<code>Hystrix</code>&#x7684;&#x5F00;&#x9500;&#xFF08;&#x7EBF;&#x7A0B;&#xFF0C;&#x6307;&#x6807;&#xFF0C;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#xFF0C;&#x65AD;&#x8DEF;&#x5668;&#x7B49;&#xFF09;&#x3002;</p>
+<p><code>Netflix</code>&#x7684;<code>API</code>&#x4F7F;&#x7528;&#x7EBF;&#x7A0B;&#x9694;&#x79BB;&#x6280;&#x672F;&#x6BCF;&#x5929;&#x5904;&#x7406;&#x4E0A;&#x767E;&#x4EBF;&#x7684;&#x547D;&#x4EE4;&#x3002;&#x6BCF;&#x4E2A;<code>API</code>&#x5B9E;&#x4F8B;&#x62E5;&#x6709;40&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x6C60;&#xFF0C;&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x6C60;&#x6709;5&#xFF5E;20&#x4E2A;&#x7EBF;&#x7A0B;&#xFF08;&#x5927;&#x591A;&#x6570;&#x8BBE;&#x7F6E;&#x4E3A;10&#xFF09;&#x3002;</p>
+<p>&#x4E0B;&#x56FE;&#x5C55;&#x793A;&#x4E86;&#x4E00;&#x4E2A;<code>HystrixCommand</code>&#x5728;&#x5355;&#x4E2A;<code>API</code>&#x5B9E;&#x4F8B;&#x4E0A;&#x4EE5;&#x6BCF;&#x79D2;60&#x4E2A;&#x8BF7;&#x6C42;&#x7684;&#x901F;&#x5EA6;&#x6267;&#x884C;&#xFF08;&#x6BCF;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x6BCF;&#x79D2;&#x7EA6;350&#x4E2A;&#x7EBF;&#x7A0B;&#x5728;&#x6267;&#x884C;&#xFF09;</p>
+<p><img src="images/thread-cost-60rps-original.png" alt=""></p>
+<p>&#x5728;&#x4E2D;&#x4F4D;&#x6570;&#xFF08;&#x6216;&#x66F4;&#x4F4E;&#xFF09;&#x5904;&#xFF0C;&#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x7EBF;&#x7A0B;&#x662F;&#x6CA1;&#x6709;&#x6210;&#x672C;&#x7684;&#x3002;</p>
+<p>&#x5728;&#x7B2C;90&#x4E2A;&#x767E;&#x5206;&#x70B9;&#xFF0C;&#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x7EBF;&#x7A0B;&#x8981;&#x82B1;&#x8D39;3ms&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+<p>&#x5728;&#x7B2C;99&#x4E2A;&#x767E;&#x5206;&#x4F4D;&#x6570;&#x5904;&#xFF0C;&#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x7EBF;&#x7A0B;&#x8981;&#x82B1;&#x8D39;9ms&#x3002; &#x4F46;&#x662F;&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x6210;&#x672C;&#x7684;&#x589E;&#x52A0;&#x8FDC;&#x8FDC;&#x5C0F;&#x4E8E;&#x5355;&#x72EC;&#x7EBF;&#x7A0B;&#xFF08;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#xFF09;&#x7684;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x7684;&#x589E;&#x52A0;&#xFF0C;&#x540E;&#x8005;&#x4ECE;2&#x8DF3;&#x5230;28&#xFF0C;&#x800C;&#x6210;&#x672C;&#x4ECE;0&#x8DF3;&#x5230;9&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x8FD9;&#x6837;&#x7684;&#x7535;&#x8DEF;&#xFF0C;&#x8FD9;&#x79CD;&#x5F00;&#x9500;&#x5728;90&#xFF05;&#x6216;&#x66F4;&#x9AD8;&#x7684;&#x767E;&#x5206;&#x6BD4;&#x4E0A;&#x88AB;&#x8BA4;&#x4E3A;&#x5BF9;&#x4E8E;&#x5927;&#x591A;&#x6570;<code>Netflix</code>&#x7528;&#x4F8B;&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x7684;&#xFF0C;&#x4EE5;&#x5B9E;&#x73B0;&#x6240;&#x5177;&#x6709;&#x7684;&#x5F39;&#x6027;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x5305;&#x88C5;&#x5EF6;&#x8FDF;&#x975E;&#x5E38;&#x4F4E;&#x7684;&#x8BF7;&#x6C42;&#x7684;&#x7535;&#x8DEF;&#xFF08;&#x4F8B;&#x5982;&#x90A3;&#x4E9B;&#x4E3B;&#x8981;&#x8BBF;&#x95EE;&#x5185;&#x5B58;&#x7F13;&#x5B58;&#x7684;&#x8BF7;&#x6C42;&#xFF09;&#xFF0C;&#x5F00;&#x9500;&#x53EF;&#x80FD;&#x4F1A;&#x8FC7;&#x9AD8;&#xFF0C;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x65B9;&#x6CD5;&#xFF0C;&#x4F8B;&#x5982;&#x53EF;&#x5C1D;&#x8BD5;&#x7684;&#x4FE1;&#x53F7;&#x91CF;&#xFF0C;&#x5C3D;&#x7BA1;&#x5B83;&#x4EEC;&#x4E0D;&#x5141;&#x8BB8;&#x8D85;&#x65F6;&#xFF0C; &#x63D0;&#x4F9B;&#x6700;&#x5927;&#x7684;&#x5F39;&#x6027;&#x4F18;&#x52BF;&#xFF0C;&#x800C;&#x6CA1;&#x6709;&#x5F00;&#x9500;&#x3002; &#x4F46;&#x662F;&#xFF0C;&#x603B;&#x7684;&#x6765;&#x8BF4;&#x5F00;&#x9500;&#x5F88;&#x5C0F;&#xFF0C;&#x4EE5;&#x81F3;&#x4E8E;<code>Netflix</code>&#x5B9E;&#x9645;&#x4E0A;&#x901A;&#x5E38;&#x6BD4;&#x8FD9;&#x79CD;&#x6280;&#x672F;&#x66F4;&#x559C;&#x6B22;&#x4F7F;&#x7528;&#x5355;&#x72EC;&#x7EBF;&#x7A0B;&#x7684;&#x9694;&#x79BB;&#x4F18;&#x52BF;&#x3002;</p>
+<h2 id="&#x4FE1;&#x53F7;&#x91CF;">&#x4FE1;&#x53F7;&#x91CF;</h2>
+<p>&#x4F60;&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7EBF;&#x7A0B;&#x6C60;&#x3001;&#x961F;&#x5217;&#x6570;&#x6765;&#x9650;&#x5236;&#x5BF9;&#x7ED9;&#x5B9A;&#x4F9D;&#x8D56;&#x670D;&#x52A1;&#x7684;&#x5E76;&#x53D1;&#x8C03;&#x7528;&#x6570;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4FE1;&#x53F7;&#x91CF;&#xFF08;&#x6216;&#x8005;&#x8BA1;&#x6570;&#x5668;&#xFF09;&#x8FBE;&#x5230;&#x8FD9;&#x79CD;&#x76EE;&#x7684;&#x3002;&#x8FD9;&#x4F7F;Hystrix&#x65E0;&#x9700;&#x4F7F;&#x7528;&#x7EBF;&#x7A0B;&#x6C60;&#x5C31;&#x53EF;&#x4EE5;&#x51CF;&#x8F7B;&#x8D1F;&#x8F7D;&#xFF0C;&#x4F46;&#x5B83;&#x4E0D;&#x5141;&#x8BB8;&#x8D85;&#x65F6;&#x548C;&#x9000;&#x51FA;&#x3002; &#x5982;&#x679C;&#x60A8;&#x4FE1;&#x4EFB;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x5E76;&#x4E14;&#x53EA;&#x60F3;&#x51CF;&#x5C11;&#x8D1F;&#x8F7D;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x3002;</p>
+<p><code>HystrixCommand</code>&#x548C;<code>HystrixObservableCommand</code>&#x5728;&#x4E0B;&#x9762;&#x4FE9;&#x4E2A;&#x5730;&#x65B9;&#x652F;&#x6301;&#x4FE1;&#x53F7;&#x91CF;&#xFF1A;</p>
+<ul>
+<li>Fallback&#xFF1A;&#x5F53;<code>Hystrix</code>&#x6267;&#x884C;&#x964D;&#x7EA7;&#x903B;&#x8F91;&#x65F6;&#xFF0C;&#x5B83;&#x603B;&#x662F;&#x5728;<code>Tomcat</code>&#x7EBF;&#x7A0B;&#x6C60;&#x4E0A;&#x8C03;&#x7528;&#xFF1F;&#xFF1F;&#xFF1F;</li>
+<li>Exection&#xFF1A;&#x5982;&#x679C;&#x4F60;&#x5C06;<code>execution.isolation.strategy</code>&#x8BBE;&#x7F6E;&#x6210;<code>SEMAPHORE</code>&#xFF0C;&#x5219;<code>Hystrix</code>&#x5C06;&#x4F1A;&#x4F7F;&#x7528;&#x4FE1;&#x53F7;&#x91CF;&#x800C;&#x4E0D;&#x662F;&#x7EBF;&#x7A0B;&#x6C60;&#x6765;&#x9650;&#x5236;&#x8C03;&#x7528;&#x8BE5;&#x547D;&#x4EE4;&#x7684;&#x5E76;&#x53D1;&#x7236;&#x7EBF;&#x7A0B;&#x7684;&#x6570;&#x91CF;&#x3002;</li>
+</ul>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x52A8;&#x6001;&#x5C5E;&#x6027;&#x914D;&#x7F6E;&#x914D;&#x7F6E;&#x4FE1;&#x53F7;&#x91CF;&#xFF0C;&#x7136;&#x540E;&#x8BA9;&#x5176;&#x9650;&#x5236;&#x6709;&#x591A;&#x5C11;&#x7684;&#x7EBF;&#x7A0B;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x3002;&#x60A8;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x4E0E;&#x786E;&#x5B9A;&#x7EBF;&#x7A0B;&#x6C60;&#x5927;&#x5C0F;&#x65F6;&#x7C7B;&#x4F3C;&#x7684;&#x8BA1;&#x7B97;&#x6765;&#x786E;&#x5B9A;&#x4FE1;&#x53F7;&#x91CF;&#x7684;&#x5927;&#x5C0F;&#xFF08;&#x4E00;&#x4E2A;&#x4EE5;&#x4E9A;&#x6BEB;&#x79D2;&#x7684;&#x65F6;&#x95F4;&#x8FD4;&#x56DE;&#x7684;&#x5185;&#x5B58;&#x4E2D;&#x8C03;&#x7528;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x8D85;&#x8FC7;5000rps&#xFF0C;&#x4FE1;&#x53F7;&#x91CF;&#x53EA;&#x6709;1&#x6216;2&#xFF0C;&#x4F46;&#x9ED8;&#x8BA4;&#x503C;&#x662F;10&#xFF09;</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x4F9D;&#x8D56;&#x670D;&#x52A1;&#x4F7F;&#x7528;&#x4FE1;&#x53F7;&#x91CF;&#x5B8C;&#x6210;&#x9694;&#x79BB;&#xFF0C;&#x7136;&#x540E;&#x5B83;&#x53C8;&#x53D8;&#x5F97;&#x4E0D;&#x53EF;&#x89C1;&#x4E86;&#xFF0C;&#x5219;&#x7236;&#x7EBF;&#x7A0B;&#x4F1A;&#x4E00;&#x76F4;&#x4FDD;&#x6301;&#x963B;&#x585E;&#x76F4;&#x5230;&#x7F51;&#x7EDC;&#x8C03;&#x7528;&#x8D85;&#x65F6;&#x3002;</p>
+<p>&#x4E00;&#x65E6;&#x4FE1;&#x53F7;&#x91CF;&#x8FBE;&#x5230;&#x9650;&#x5236;&#xFF0C;&#x4FE1;&#x53F7;&#x91CF;&#x5C31;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x62D2;&#x7EDD;&#x6D4B;&#x91CF;&#xFF0C;&#x4F46;&#x662F;&#x4E3A;&#x4FE1;&#x53F7;&#x91CF;&#x586B;&#x5145;&#x7684;&#x7EBF;&#x7A0B;&#x4E0D;&#x53EF;&#x4EE5;&#x6D88;&#x5931;&#x3002;</p>
+<h1 id="&#x8BF7;&#x6C42;&#x5408;&#x5E76;">&#x8BF7;&#x6C42;&#x5408;&#x5E76;</h1>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x521B;&#x9020;<code>HystrixCommand</code>&#x4E4B;&#x524D;&#xFF0C;&#x653E;&#x7F6E;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x6298;&#x53E0;&#x7684;&#x4EE3;&#x7801;&#xFF08;&#x62BD;&#x8C61;&#x7236;&#x7EA7;&#x7684;<code>HystrixCollapser</code>&#xFF09;,&#x5C06;&#x591A;&#x4E2A;&#x8BF7;&#x6C42;&#x6298;&#x53E0;&#x653E;&#x5230;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x8C03;&#x7528;&#x91CC;&#x3002;</p>
+<p>&#x4E0B;&#x56FE;&#x5C55;&#x793A;&#x5728;&#x4FE9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x548C;&#x7F51;&#x7EDC;&#x8C03;&#x7528;&#x7684;&#x6D41;&#x7A0B;&#x3002;&#x5047;&#x8BBE;&#x4FE9;&#x8005;&#x5728;10ms&#x5185;&#x8BF7;&#x6C42;&#x90FD;&#x662F;&#x5E76;&#x53D1;&#x7684;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x573A;&#x666F;&#x662F;&#x6CA1;&#x6709;&#x8BF7;&#x6C42;&#x5408;&#x5E76;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x573A;&#x666F;&#x662F;&#x6709;&#x8BF7;&#x6C42;&#x5408;&#x5E76;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x3002;</p>
+<p><img src="images/collapser-1280.png" alt=""></p>
+<h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528;&#x8BF7;&#x6C42;&#x5408;&#x5E76;&#xFF1F;">&#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528;&#x8BF7;&#x6C42;&#x5408;&#x5E76;&#xFF1F;</h2>
+<p>&#x4F7F;&#x7528;&#x8BF7;&#x6C42;&#x5408;&#x5E76;&#x53EF;&#x4EE5;&#x5728;&#x5E76;&#x53D1;&#x6267;&#x884C;<code>HystrixCommand</code>&#x65F6;&#xFF0C;&#x6709;&#x6548;&#x7684;&#x51CF;&#x5C11;&#x7EBF;&#x7A0B;&#x6570;&#x3001;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x65F6;&#x95F4;&#x3002;&#x8BF7;&#x6C42;&#x5408;&#x5E76;&#x662F;&#x4EE5;&#x4E00;&#x79CD;&#x81EA;&#x52A8;&#x5316;&#x7684;&#x65B9;&#x5F0F;&#x5B8C;&#x6210;&#xFF0C;&#x4E0D;&#x4F1A;&#x5F3A;&#x5236;&#x4EE3;&#x7801;&#x5E93;&#x7684;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x624B;&#x52A8;&#x7F16;&#x7801;&#x6765;&#x5B8C;&#x6210;&#x8BF7;&#x6C42;&#x5408;&#x5E76;&#x3002;</p>
+<h3 id="&#x6574;&#x4F53;&#x4E0A;&#x4E0B;&#x6587;&#xFF08;&#x8DE8;&#x8D8A;&#x6240;&#x6709;&#x7684;tomcat&#x7EBF;&#x7A0B;&#xFF09;">&#x6574;&#x4F53;&#x4E0A;&#x4E0B;&#x6587;&#xFF08;&#x8DE8;&#x8D8A;&#x6240;&#x6709;&#x7684;Tomcat&#x7EBF;&#x7A0B;&#xFF09;</h3>
+<p>&#x7406;&#x60F3;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8BF7;&#x6C42;&#x5408;&#x5E76;&#x662F;&#x5728;&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x7684;<code>level</code>&#x6765;&#x5B8C;&#x6210;&#x7684;&#x3002;&#x8FD9;&#x6837;&#x5728;<code>Tomcat</code>&#x7EBF;&#x7A0B;&#x4E0A;&#x6765;&#x81EA;&#x4EFB;&#x4F55;&#x7528;&#x6237;&#x7684;&#x8BF7;&#x6C42;&#x90FD;&#x53EF;&#x4EE5;&#x5408;&#x5E76;&#x5230;&#x4E00;&#x8D77;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x914D;&#x7F6E;<code>HystrixCommand</code>&#x5728;&#x4EFB;&#x4F55;&#x7528;&#x6237;&#x4E0B;&#x90FD;&#x652F;&#x6301;&#x6279;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x6765;&#x8BF7;&#x6C42;&#x83B7;&#x53D6;&#x7535;&#x5F71;&#x8BC4;&#x7EA7;&#x7684;&#x670D;&#x52A1;&#x4F9D;&#x8D56;&#x3002;&#x5F53;&#x5728;&#x540C;&#x4E00;&#x4E2A;<code>JVM</code>&#x4E0B;&#x7684;&#x4EFB;&#x4F55;&#x7528;&#x6237;&#x53D1;&#x51FA;&#x8FD9;&#x6837;&#x7684;&#x8BF7;&#x6C42;&#x65F6;&#xFF0C;<code>Hystrix</code>&#x4F1A;&#x8FD9;&#x4E2A;&#x8BF7;&#x6C42;&#x4E0E;&#x5176;&#x4ED6;&#x4EBA;&#x540C;&#x6837;&#x7684;&#x8BF7;&#x6C42;&#x653E;&#x5728;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x5408;&#x5E76;&#x7684;&#x7F51;&#x7EDC;&#x8C03;&#x7528;&#x4E2D;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x5408;&#x5E76;&#x5668;&#x4F1A;&#x5C06;&#x5355;&#x4E2A;<code>HystrixRquestContext</code>&#x5408;&#x5E76;&#x5230;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x8C03;&#x7528;&#x4E2D;&#xFF0C;&#x6240;&#x4EE5;&#x4E0B;&#x6E38;&#x7CFB;&#x7EDF;&#x5FC5;&#x987B;&#x652F;&#x6301;&#x8FD9;&#x4E2A;&#x573A;&#x666F;&#x4E0B;&#x7684;&#x5904;&#x7406;&#x3002;</p>
+<h3 id="&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x4E0A;&#x4E0B;&#x6587;&#xFF08;&#x5355;&#x4E2A;tomcat&#x7EBF;&#x7A0B;&#xFF09;">&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x4E0A;&#x4E0B;&#x6587;&#xFF08;&#x5355;&#x4E2A;Tomcat&#x7EBF;&#x7A0B;&#xFF09;</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x914D;&#x7F6E;<code>HystrixCommand</code>&#x53EA;&#x5BF9;&#x5355;&#x4E2A;&#x7528;&#x6237;&#x8FDB;&#x884C;&#x6279;&#x5904;&#x7406;&#x7684;&#x8BDD;&#xFF0C;<code>Hystrix</code>&#x4F1A;&#x5728;&#x5355;&#x4E2A;<code>Tomcat</code>&#x7EBF;&#x7A0B;&#x4E2D;&#x5408;&#x5E76;&#x8BF7;&#x6C42;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x60F3;&#x4E3A;300&#x4E2A;&#x89C6;&#x9891;&#x5BF9;&#x8C61;&#x83B7;&#x53D6;&#x4E66;&#x7B7E;&#xFF0C;<code>Hystrix</code>&#x53EF;&#x4EE5;&#x5C06;&#x4ED6;&#x4EEC;&#x5408;&#x5E76;&#x5230;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x53D1;&#x51FA;300&#x4E2A;&#x7F51;&#x7EDC;&#x8C03;&#x7528;&#x3002;</p>
+<h3 id="&#x5BF9;&#x8C61;&#x5EFA;&#x6A21;&#x548C;&#x4EE3;&#x7801;&#x590D;&#x6742;&#x6027;">&#x5BF9;&#x8C61;&#x5EFA;&#x6A21;&#x548C;&#x4EE3;&#x7801;&#x590D;&#x6742;&#x6027;</h3>
+<p>&#x6709;&#x65F6;&#xFF0C;&#x4F60;&#x60F3;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5BF9;&#x4E8E;&#x6D88;&#x8D39;&#x8005;&#x975E;&#x5E38;&#x7B26;&#x5408;&#x903B;&#x8F91;&#x7684;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#xFF0C;&#x4F46;&#x8FD9;&#x5F80;&#x5F80;&#x5F88;&#x96BE;&#x590D;&#x5408;&#x5BF9;&#x8C61;&#x751F;&#x4EA7;&#x8005;&#x7684;&#x5408;&#x7406;&#x8D44;&#x6E90;&#x5229;&#x7528;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#xFF0C;&#x4E00;&#x4E2A;300&#x4E2A;&#x7535;&#x5F71;&#x5BF9;&#x8C61;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x73B0;&#x5728;&#x904D;&#x5386;&#x8FD9;&#x4E2A;&#x96C6;&#x5408;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x4E3A;&#x6BCF;&#x4E2A;&#x5BF9;&#x8C61;&#x8C03;&#x7528;<code>getSomeAtrribute()</code>&#x65B9;&#x6CD5;&#x6765;&#x5B8C;&#x5584;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#x3002;&#x5982;&#x679C;&#x7B80;&#x5355;&#x8FD9;&#x6837;&#x5B9E;&#x73B0;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x5728;&#x6BEB;&#x79D2;&#x5185;&#x8C03;&#x7528;300&#x4E2A;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#xFF0C;&#x8FD9;&#x5F88;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x76EE;&#x6807;&#x670D;&#x52A1;&#x8D44;&#x6E90;&#x9971;&#x548C;&#x3002;</p>
+<p>&#x6709;&#x4E00;&#x4E9B;&#x624B;&#x5DE5;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5904;&#x7406;&#x8FD9;&#x79CD;&#x95EE;&#x9898;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x5728;&#x7528;&#x6237;&#x8C03;&#x7528;<code>getSomeAttribute()</code>&#x4E4B;&#x524D;&#xFF0C;&#x8981;&#x6C42;&#x4ED6;&#x4EEC;&#x4E00;&#x6B21;&#x6027;&#x6267;&#x884C;&#x83B7;&#x53D6;&#x5C5E;&#x6027;&#x7684;&#x89C6;&#x9891;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x4E00;&#x6B21;&#x6027;&#x63D0;&#x53D6;&#x4ED6;&#x4EEC;&#x3002;</p>
+<p>&#x6216;&#x8005;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x62C6;&#x5206;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#x3002;&#x8BA9;&#x7528;&#x6237;&#x5FC5;&#x987B;&#x4E00;&#x4E2A;&#x5730;&#x65B9;&#x83B7;&#x53D6;&#x89C6;&#x9891;&#x5217;&#x8868;&#xFF0C;&#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x5730;&#x65B9;&#x83B7;&#x53D6;&#x8FD9;&#x4E2A;&#x89C6;&#x9891;&#x5217;&#x8868;&#x7684;&#x5C5E;&#x6027;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x4E5F;&#x80FD;&#x89E3;&#x51B3;&#x6027;&#x80FD;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;<code>API</code>&#x548C;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#x4E0D;&#x80FD;&#x8FBE;&#x5230;&#x7406;&#x60F3;&#x7684;&#x6A21;&#x578B;&#x3001;&#x5728;&#x4F7F;&#x7528;&#x6A21;&#x5F0F;&#x4E0A;&#x4E5F;&#x53EF;&#x80FD;&#x4E0D;&#x5339;&#x914D;&#x3002;&#x5F53;&#x591A;&#x4E2A;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x5728;&#x4E00;&#x4E2A;&#x4EE3;&#x7801;&#x5E93;&#x4E0A;&#x5DE5;&#x4F5C;&#x65F6;&#xFF0C;&#x5B83;&#x4EEC;&#x8FD8;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x7B80;&#x5355;&#x7684;&#x9519;&#x8BEF;&#x548C;&#x6548;&#x7387;&#x4F4E;&#x4E0B;&#xFF0C;&#x56E0;&#x4E3A;&#x9488;&#x5BF9;&#x4E00;&#x4E2A;&#x7528;&#x4F8B;&#x8FDB;&#x884C;&#x7684;&#x4F18;&#x5316;&#x53EF;&#x80FD;&#x4F1A;&#x56E0;&#x53E6;&#x4E00;&#x4E2A;&#x7528;&#x4F8B;&#x7684;&#x5B9E;&#x73B0;&#x548C;&#x4EE3;&#x7801;&#x7684;&#x65B0;&#x8DEF;&#x5F84;&#x800C;&#x4E2D;&#x65AD;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x5C06;&#x5408;&#x5E76;&#x8BF7;&#x6C42;&#x903B;&#x8F91;&#x653E;&#x5230;<code>Hystrix</code>&#x5C42;&#xFF0C;&#x65E0;&#x8BBA;&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x5BF9;&#x8C61;&#x6A21;&#x578B;&#xFF0C;&#x4EE5;&#x4EC0;&#x4E48;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x8C03;&#x7528;&#xFF0C;&#x5176;&#x4ED6;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x662F;&#x5426;&#x77E5;&#x9053;&#x9700;&#x8981;&#x4F18;&#x5316;&#xFF0C;&#x90FD;&#x65E0;&#x5173;&#x7D27;&#x8981;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x5C06;<code>getSomeAttribute()</code>&#x65B9;&#x6CD5;&#x653E;&#x5728;&#x6700;&#x5408;&#x9002;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5E76;&#x4EE5;&#x9002;&#x5408;&#x4F7F;&#x7528;&#x6A21;&#x5F0F;&#x7684;&#x4EFB;&#x4F55;&#x65B9;&#x5F0F;&#x8C03;&#x7528;&#x5B83;&#xFF0C;&#x7136;&#x540E;&#x8BF7;&#x6C42;&#x5408;&#x5E76;&#x5C06;&#x81EA;&#x52A8;&#x5C06;&#x8C03;&#x7528;&#x6279;&#x91CF;&#x653E;&#x5165;&#x65F6;&#x95F4;&#x7A97;&#x53E3;&#x3002;</p>
+<h3 id="&#x8BF7;&#x6C42;&#x5408;&#x5E76;&#x7684;&#x4EE3;&#x4EF7;">&#x8BF7;&#x6C42;&#x5408;&#x5E76;&#x7684;&#x4EE3;&#x4EF7;</h3>
+<p>&#x8BF7;&#x6C42;&#x5408;&#x5E76;&#x7684;&#x552F;&#x4E00;&#x4EE3;&#x4EF7;&#x5C31;&#x662F;&#x5728;&#x771F;&#x6B63;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x591A;&#x4E00;&#x6BB5;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;&#x3002;&#x6700;&#x5927;&#x5EF6;&#x8FDF;&#x65F6;&#x95F4;&#x5C31;&#x662F;&#x6279;&#x5904;&#x7406;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x5927;&#x5C0F;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x8981;&#x82B1;&#x8D39;5ms&#xFF0C;&#x6279;&#x5904;&#x7406;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x662F;10ms&#xFF0C;&#x5728;&#x6700;&#x574F;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6267;&#x884C;&#x65F6;&#x95F4;&#x5C06;&#x82B1;&#x8D39;15ms&#x3002;&#x901A;&#x5E38;&#xFF0C;&#x4E00;&#x4E2A;&#x8BF7;&#x6C42;&#x521A;&#x51C6;&#x5907;&#x53D1;&#x9001;&#x65F6;&#x4E0D;&#x53EF;&#x80FD;&#x662F;&#x6B63;&#x597D;&#x8981;&#x53D1;&#x9001;&#x6279;&#x5904;&#x7406;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x901A;&#x5E38;&#x662F;&#x6279;&#x5904;&#x7406;&#x95F4;&#x9694;&#x7684;&#x4E00;&#x822C;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x4E45;&#x5F97;&#x8BDD;&#x8D39;10ms&#x3002;</p>
+<p>&#x786E;&#x5B9A;&#x6B64;&#x6210;&#x672C;&#x662F;&#x5426;&#x503C;&#x5F97;&#x53D6;&#x51B3;&#x4E8E;&#x6240;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;&#x3002; &#x9AD8;&#x5EF6;&#x8FDF;&#x547D;&#x4EE4;&#x4E0D;&#x4F1A;&#x53D7;&#x5230;&#x5C11;&#x91CF;&#x989D;&#x5916;&#x5E73;&#x5747;&#x5EF6;&#x8FDF;&#x7684;&#x5F71;&#x54CD;&#x3002; &#x540C;&#x6837;&#xFF0C;&#x7ED9;&#x5B9A;&#x547D;&#x4EE4;&#x7684;&#x5E76;&#x53D1;&#x91CF;&#x5F88;&#x5173;&#x952E;&#xFF1A;&#x5982;&#x679C;&#x5F88;&#x5C11;&#x6709;&#x8D85;&#x8FC7;1&#x4E2A;&#x6216;2&#x4E2A;&#x8BF7;&#x6C42;&#x88AB;&#x4E00;&#x8D77;&#x6279;&#x5904;&#x7406;&#xFF0C;&#x90A3;&#x4E48;&#x4ED8;&#x51FA;&#x4EE3;&#x4EF7;&#x662F;&#x6CA1;&#x6709;&#x610F;&#x4E49;&#x7684;&#x3002; &#x5B9E;&#x9645;&#x4E0A;&#xFF0C;&#x5728;&#x5355;&#x7EBF;&#x7A0B;&#x987A;&#x5E8F;&#x8FED;&#x4EE3;&#x4E2D;&#xFF0C;&#x8BF7;&#x6C42;&#x5408;&#x5E76;&#x5C06;&#x662F;&#x4E3B;&#x8981;&#x7684;&#x6027;&#x80FD;&#x74F6;&#x9888;&#xFF0C;&#x56E0;&#x4E3A;&#x6BCF;&#x6B21;&#x8FED;&#x4EE3;&#x5C06;&#x7B49;&#x5F85;10ms&#x7684;&#x6279;&#x5904;&#x7406;&#x7A97;&#x53E3;&#x65F6;&#x95F4;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x547D;&#x4EE4;&#x88AB;&#x5927;&#x91CF;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x5C06;&#x6570;&#x5341;&#x4E2A;&#x751A;&#x81F3;&#x6570;&#x767E;&#x4E2A;&#x547C;&#x53EB;&#x5206;&#x6279;&#x5904;&#x7406;&#xFF0C;&#x5219;&#x7531;&#x4E8E;<code>Hystrix</code>&#x51CF;&#x5C11;&#x4E86;&#x6240;&#x9700;&#x7684;&#x7EBF;&#x7A0B;&#x6570;&#x548C;&#x4E0E;&#x4E4B;&#x8FDE;&#x63A5;&#x7684;&#x7F51;&#x7EDC;&#x6570;&#xFF0C;&#x56E0;&#x6B64;&#x5B9E;&#x73B0;&#x7684;&#x541E;&#x5410;&#x7387;&#x901A;&#x5E38;&#x8FDC;&#x8FDC;&#x8D85;&#x8FC7;&#x6210;&#x672C;&#x3002; </p>
+<h3 id="&#x8BF7;&#x6C42;&#x5408;&#x5E76;&#x6D41;&#x7A0B;">&#x8BF7;&#x6C42;&#x5408;&#x5E76;&#x6D41;&#x7A0B;</h3>
+<p><img src="images/collapser-flow.png" alt=""></p>
+<h1 id="&#x8BF7;&#x6C42;&#x7F13;&#x5B58;">&#x8BF7;&#x6C42;&#x7F13;&#x5B58;</h1>
+<p><code>HystrixCommand</code>&#x548C;<code>HystrixObservableCommand</code>&#x53EF;&#x4EE5;&#x5B9A;&#x4E00;&#x4E2A;&#x7F13;&#x5B58;<code>key</code>&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5728;&#x9AD8;&#x5E76;&#x53D1;&#x73AF;&#x5883;&#x5254;&#x9664;&#x91CD;&#x590D;&#x7684;&#x8BF7;&#x6C42;&#x3002;</p>
+<p>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#x6D41;&#x7A0B;&#xFF0C;&#x6D89;&#x53CA;HTTP&#x8BF7;&#x6C42;&#x751F;&#x547D;&#x5468;&#x671F;&#x548C;&#x4E24;&#x4E2A;&#x5728;&#x8BE5;&#x8BF7;&#x6C42;&#x4E2D;&#x5DE5;&#x4F5C;&#x7684;&#x7EBF;&#x7A0B;&#xFF1A;</p>
+<p><img src="images/request-cache-1280.png" alt=""></p>
+<p>&#x8BF7;&#x6C42;&#x7F13;&#x5B58;&#x7684;&#x597D;&#x5904;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x4E0D;&#x540C;&#x7684;&#x4EE3;&#x7801;&#x8DEF;&#x5F84;&#x53EF;&#x4EE5;&#x6267;&#x884C;Hystrix&#x547D;&#x4EE4;&#xFF0C;&#x800C;&#x65E0;&#x9700;&#x62C5;&#x5FC3;&#x91CD;&#x590D;&#x7684;&#x5DE5;&#x4F5C;</li>
+</ul>
+<p>&#x8FD9;&#x5728;&#x5927;&#x578B;&#x9879;&#x76EE;&#x5F00;&#x53D1;&#x4E2D;&#x5F88;&#x6709;&#x597D;&#x5904;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#xFF0C;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x7684;Account&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x4EE3;&#x7801;&#x8DEF;&#x5F84;&#x90FD;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x8BF7;&#x6C42;</p>
+<pre><code class="lang-java">Account account = <span class="hljs-keyword">new</span> UserGetAccount(accountId).execute();
+
+<span class="hljs-comment">//or</span>
+
+Observable&lt;Account&gt; accountObservable = <span class="hljs-keyword">new</span> UserGetAccount(accountId).observe();
+</code></pre>
+<p><code>Hystrix RequestCache</code>&#x5C06;&#x53EA;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x57FA;&#x7840;<code>run()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x4E14;&#x5C3D;&#x7BA1;&#x5B9E;&#x4F8B;&#x5316;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x4F46;&#x6267;&#x884C;HystrixCommand&#x7684;&#x4E24;&#x4E2A;&#x7EBF;&#x7A0B;&#x4ECD;&#x5C06;&#x63A5;&#x6536;&#x76F8;&#x540C;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<ul>
+<li>&#x6574;&#x4E2A;&#x8BF7;&#x6C42;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x68C0;&#x7D22;&#x90FD;&#x662F;&#x4E00;&#x81F4;&#x7684;</li>
+</ul>
+<p>&#x800C;&#x4E0D;&#x662F;&#x6BCF;&#x6B21;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x65F6;&#x90FD;&#x53EF;&#x80FD;&#x8FD4;&#x56DE;&#x4E0D;&#x540C;&#x7684;&#x503C;&#xFF08;&#x6216;&#x56DE;&#x9000;&#xFF09;&#xFF0C;&#x800C;&#x662F;&#x5BF9;&#x540C;&#x4E00;&#x8BF7;&#x6C42;&#x5185;&#x7684;&#x6240;&#x6709;&#x540E;&#x7EED;&#x8C03;&#x7528;&#x8FDB;&#x884C;&#x7F13;&#x5B58;&#x5E76;&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x54CD;&#x5E94;&#x3002;</p>
+<ul>
+<li>&#x6D88;&#x9664;&#x91CD;&#x590D;&#x7684;&#x7EBF;&#x7A0B;&#x6267;&#x884C;</li>
+</ul>
+<p>&#x7531;&#x4E8E;&#x8BF7;&#x6C42;&#x7F13;&#x5B58;&#x4F4D;&#x4E8E;<code>construct()</code>&#x6216;<code>run()</code>&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x7684;&#x524D;&#x9762;&#xFF0C;&#x56E0;&#x6B64;<code>Hystrix</code>&#x53EF;&#x4EE5;&#x5728;&#x5BFC;&#x81F4;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x4E4B;&#x524D;&#x5C06;&#x91CD;&#x590D;&#x6570;&#x636E;&#x5220;&#x9664;&#x3002;</p>
+<p>&#x5982;&#x679C;<code>Hystrix</code>&#x6CA1;&#x6709;&#x5B9E;&#x73B0;&#x8BF7;&#x6C42;&#x7F13;&#x5B58;&#x529F;&#x80FD;&#xFF0C;&#x5219;&#x6BCF;&#x4E2A;&#x547D;&#x4EE4;&#x90FD;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5728;<code>Construct</code>&#x6216;<code>run</code>&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x5B9E;&#x73B0;&#x5B83;&#xFF0C;&#x8FD9;&#x4F1A;&#x5C06;&#x5176;&#x653E;&#x5728;&#x7EBF;&#x7A0B;&#x6392;&#x961F;&#x548C;&#x6267;&#x884C;&#x4E4B;&#x540E;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Home.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Home">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"How it Works","level":"1.3","depth":1,"previous":{"title":"Home","level":"1.2","depth":1,"path":"Home.md","ref":"Home.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"How_it_Works.md","mtime":"2020-12-04T08:55:26.668Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-05T06:07:46.173Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
